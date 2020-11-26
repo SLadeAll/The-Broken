@@ -1,0 +1,302 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://GameAssets/Background/night-town-background-files/layers/night-town-background-town.png" type="Texture" id=1]
+[ext_resource path="res://GameAssets/Background/layers/town.png" type="Texture" id=2]
+[ext_resource path="res://GameAssets/Background/layers/clouds.png" type="Texture" id=3]
+[ext_resource path="res://InstantDead.tscn" type="PackedScene" id=4]
+[ext_resource path="res://cityGround.tres" type="TileSet" id=5]
+[ext_resource path="res://Player1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameAssets/Titlesets/tiles.png" type="Texture" id=7]
+[ext_resource path="res://SpecialGroundCaste.tres" type="TileSet" id=8]
+[ext_resource path="res://TwonDoor.tscn" type="PackedScene" id=9]
+
+[node name="Town" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1230, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 311.166, -31.165 )
+scale = Vector2( 2.42891, 1.91701 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 926.136, -31.165 )
+scale = Vector2( 2.42891, 1.91701 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 310.235, 300 )
+scale = Vector2( 2.42891, 1.91701 )
+texture = ExtResource( 3 )
+flip_v = true
+
+[node name="instant death touch" parent="." instance=ExtResource( 4 )]
+position = Vector2( 596.328, 381.417 )
+scale = Vector2( 30, 1.885 )
+
+[node name="instant death touch2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1908.02, 384.842 )
+scale = Vector2( 30, 1.885 )
+
+[node name="instant death touch3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3651.05, 377.061 )
+scale = Vector2( 30, 1.885 )
+
+[node name="instant death touch4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5036.13, 377.061 )
+scale = Vector2( 30, 1.885 )
+
+[node name="instant death touch5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6429, 415.967 )
+scale = Vector2( 30, 1.885 )
+
+[node name="instant death touch6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7915.24, 478.218 )
+scale = Vector2( 30, 1.885 )
+
+[node name="TownDoor" parent="." instance=ExtResource( 9 )]
+position = Vector2( 7858.35, 72.8419 )
+
+[node name="instant death touch7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9424.82, 501.562 )
+scale = Vector2( 30, 1.885 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.8, 1 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1224, 0 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 311.16, 300 )
+scale = Vector2( 2.43614, 1.88546 )
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 909.202, 300 )
+scale = Vector2( 2.43614, 1.88546 )
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 311.16, 300 )
+scale = Vector2( 2.43614, 1.88546 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 311.414, -16.8504 )
+scale = Vector2( 2.43614, 1.88546 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 930.414, -16.8504 )
+scale = Vector2( 2.43614, 1.88546 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_mirroring = Vector2( 1200, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 305.75, 127.759 )
+scale = Vector2( 1.21584, 1.38075 )
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 900, 127.759 )
+scale = Vector2( 1.21584, 1.38075 )
+texture = ExtResource( 1 )
+
+[node name="ParallaxBackground6" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground6"]
+motion_mirroring = Vector2( 1400, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 25.6979, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 77.6979, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 129.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 172.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 336, 64, 32, 32 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 206.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 336, 64, 32, 32 )
+
+[node name="Sprite6" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 250.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite7" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 301.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite8" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 339.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite9" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 385.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite10" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 430.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite11" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 517.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite12" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 479.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite13" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 551.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite14" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 598.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite15" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 628.698, 179.975 )
+scale = Vector2( 1.10376, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite16" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 736.463, 179.975 )
+scale = Vector2( 3.5523, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite17" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 904.463, 179.975 )
+scale = Vector2( 3.5523, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite18" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 1072.88, 179.975 )
+scale = Vector2( 3.5523, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite19" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 1239.04, 179.975 )
+scale = Vector2( 3.5523, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Sprite20" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 0.372549, 0.411765, 0.27451, 1 )
+position = Vector2( 1406.83, 179.975 )
+scale = Vector2( 3.5523, 0.97347 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 48, 32 )
+
+[node name="Player1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 55.8894, 144.261 )
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.266667, 1, 0.0156863, 1 )
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196664, 6, 0, 196665, 6, 0, 196666, 6, 0, 196667, 6, 0, 196668, 6, 0, 196669, 6, 0, 196670, 6, 0, 196671, 6, 0, 196672, 6, 0, 196673, 6, 0, 196674, 6, 0, 196675, 6, 0, 196676, 6, 0, 196677, 6, 0, 196678, 6, 0, 262152, 536870918, 0, 262153, 536870918, 0, 262162, 536870917, 0, 262163, 536870917, 0, 262164, 5, 0, 262165, 5, 0, 262174, 0, 0, 262175, 0, 0, 262176, 0, 0, 262177, 0, 0, 262180, 1, 0, 262181, 1, 0, 262182, 1, 0, 262183, 1, 0, 262192, -1610612732, 0, 262193, -1610612732, 0, 262194, -1610612732, 0, 262218, 6, 0, 262219, 6, 0, 262220, 6, 0, 262221, 6, 0, 262222, 6, 0, 262223, 6, 0, 327686, 536870918, 0, 393216, 536870914, 0, 393217, 536870914, 0, 393218, 536870914, 0, 393219, 536870914, 0, 393220, 536870914, 0, 393221, 536870914, 0, 393228, 536870918, 0, 393229, 536870918, 0, 393230, 536870918, 0, 393231, 536870918, 0, 393232, 536870918, 0, 393240, 0, 0, 393241, 0, 0, 393242, 0, 0, 393298, 6, 0, 393299, 6, 0, 393300, 6, 0, 393301, 6, 0, 393302, 6, 0, 393303, 6, 0, 393304, 6, 0, 393305, 6, 0, 393306, 6, 0, 393307, 6, 0, 393308, 6, 0, 458793, 3, 0, 458794, 3, 0, 458795, 3, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+modulate = Color( 0.266667, 1, 0.0156863, 1 )
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 268, 7, 0, 269, 7, 0, 270, 7, 0, 271, 7, 0, 196981, 6, 0, 196982, 6, 0, 196983, 6, 0, 196984, 6, 0, 196985, 6, 0, 196986, 6, 0, 196987, 6, 0, 262406, 7, 0, 262407, 7, 0, 262408, 7, 0, 262409, 7, 0, 393469, 7, 0, 393470, 7, 0, 393471, 7, 0, 393472, 7, 0, 393473, 7, 0, 393474, 7, 0, 393475, 7, 0, 459029, 1, 0, 459031, 1, 0, 459052, 3, 0, 459054, 3, 0, 459056, 3, 0, 459058, 3, 0, 459060, 3, 0, 459062, 3, 0, 459070, 6, 0, 459071, 6, 0, 459072, 6, 0, 459073, 6, 0, 459074, 6, 0, 459075, 6, 0, 459076, 6, 0, 459112, 6, 0, 459113, 6, 0, 459114, 6, 0, 459115, 6, 0, 459116, 6, 0, 459117, 6, 0, 459118, 6, 0, 524489, 7, 0, 524490, 7, 0, 524491, 7, 0, 590069, 7, 0, 590070, 7, 0, 590071, 7, 0, 590072, 7, 0, 590073, 7, 0, 590092, 7, 0, 590093, 7, 0, 590094, 7, 0, 590095, 7, 0, 590096, 7, 0, 590109, 1, 0, 590111, 1, 0, 590113, 1, 0, 590115, 1, 0, 590117, 1, 0, 655550, 7, 0, 655551, 7, 0, 655552, 7, 0, 655553, 7, 0, 655554, 7, 0, 655555, 7, 0, 655556, 7, 0, 655557, 7, 0, 655570, 7, 0, 655571, 7, 0, 655572, 7, 0, 655573, 7, 0, 655574, 7, 0, 655575, 7, 0, 655576, 7, 0, 655577, 7, 0, 655578, 7, 0, 655579, 7, 0, 655586, 7, 0, 655587, 7, 0, 655588, 7, 0, 655589, 7, 0, 655590, 7, 0, 655591, 7, 0, 655592, 7, 0, 655691, 6, 0, 655692, 6, 0, 655693, 6, 0, 655694, 6, 0, 655798, 7, 0, 655799, 7, 0, 655800, 7, 0, 655801, 7, 0, 655802, 7, 0, 721284, 0, 0, 721285, 0, 0, 721286, 0, 0, 721287, 0, 0, 721288, 0, 0, 721289, 0, 0, 721290, 0, 0, 721291, 0, 0, 721292, 0, 0, 786828, 0, 0, 786829, 0, 0, 786830, 0, 0, 786831, 0, 0, 786832, 0, 0, 786833, 0, 0, 786834, 0, 0, 786835, 0, 0, 786836, 0, 0, 786837, 0, 0, 786838, 0, 0, 786839, 0, 0, 786840, 0, 0, 786853, 7, 0, 786854, 7, 0, 786855, 7, 0, 786856, 7, 0, 786857, 7, 0, 786858, 7, 0, 786859, 7, 0, 786860, 7, 0, 786861, 7, 0, 786862, 7, 0, 786863, 7, 0, 786864, 7, 0, 786880, 7, 0, 786881, 7, 0, 786882, 7, 0, 786883, 7, 0, 786884, 7, 0, 786885, 7, 0, 786886, 7, 0, 786887, 7, 0, 786888, 7, 0, 786889, 7, 0, 786890, 7, 0, 786891, 7, 0, 786892, 7, 0, 786893, 7, 0, 786894, 7, 0, 786895, 7, 0, 786896, 7, 0, 786897, 7, 0, 786898, 7, 0, 786899, 7, 0, 786900, 7, 0, 786901, 7, 0, 786902, 7, 0, 786903, 7, 0, 786904, 7, 0, 786905, 7, 0, 786906, 7, 0, 786907, 7, 0, 786908, 7, 0, 786909, 7, 0, 786910, 7, 0, 786911, 7, 0, 852204, 8, 0, 852205, 8, 0, 852206, 8, 0, 852207, 7, 0, 852208, 8, 0, 852209, 8, 0, 852309, 6, 0, 852310, 6, 0, 852311, 6, 0, 852312, 6, 0, 852313, 6, 0, 852314, 6, 0, 852315, 6, 0, 852316, 6, 0, 852317, 6, 0, 917989, 7, 0, 917990, 7, 0, 917991, 7, 0, 917992, 7, 0, 917993, 7, 0, 917994, 7, 0, 917995, 7, 0, 917996, 7, 0, 917997, 7, 0, 917998, 7, 0, 917999, 7, 0, 1049075, 7, 0, 1049076, 7, 0, 1049077, 7, 0, 1049078, 7, 0, 1049079, 7, 0, 1049080, 7, 0, 1049081, 7, 0, 1049129, 6, 0, 1049130, 6, 0, 1049131, 6, 0, 1049132, 6, 0, 1049133, 6, 0, 1049134, 6, 0, 1049135, 6, 0, 1049136, 6, 0, 1049137, 6, 0, 1049138, 6, 0, 1049139, 6, 0, 1114624, 6, 0, 1114625, 6, 0, 1114626, 6, 0, 1114627, 6, 0, 1114628, 6, 0, 1114629, 6, 0, 1114630, 6, 0, 1114631, 6, 0, 1114632, 6, 0, 1114633, 6, 0, 1114634, 6, 0, 1114635, 6, 0, 1114636, 6, 0, 1114637, 6, 0, 1114638, 6, 0, 1114639, 6, 0, 1114640, 6, 0, 1114641, 6, 0, 1114642, 6, 0, 1114643, 6, 0, 1114645, 6, 0, 1114646, 6, 0, 1114647, 6, 0, 1114648, 6, 0, 1114649, 6, 0, 1114650, 6, 0, 1114651, 6, 0, 1114652, 6, 0, 1114653, 6, 0, 1114654, 6, 0, 1114655, 6, 0, 1114657, 6, 0, 1114658, 6, 0, 1114659, 6, 0, 1180160, 6, 0, 1180161, 6, 0, 1180162, 6, 0, 1180163, 6, 0, 1180164, 6, 0, 1180165, 6, 0, 1180166, 6, 0, 1180167, 6, 0, 1180168, 6, 0, 1180169, 6, 0, 1180170, 6, 0, 1180171, 6, 0, 1180172, 6, 0, 1180173, 6, 0, 1180174, 6, 0, 1180175, 6, 0, 1180176, 6, 0, 1180177, 6, 0, 1180178, 6, 0, 1180179, 6, 0, 1180180, 6, 0, 1180181, 6, 0, 1180182, 6, 0, 1180183, 6, 0, 1180184, 6, 0, 1180185, 6, 0, 1180186, 6, 0, 1180187, 6, 0, 1180188, 6, 0, 1180189, 6, 0, 1180190, 6, 0, 1180191, 6, 0, 1180192, 6, 0, 1180193, 6, 0, 1180194, 6, 0, 1180195, 6, 0, 1245777, -1073741818, 0, 1245778, -1073741818, 0, 1245779, -1073741818, 0, 1245780, -1073741818, 0, 1245781, -1073741818, 0, 1245782, -1073741818, 0, 1245783, -1073741818, 0, 1245784, -1073741818, 0, 1245785, -1073741818, 0, 1245786, -1073741818, 0, 1245787, -1073741818, 0, 1245808, -1073741818, 0, 1245809, -1073741818, 0, 1245810, -1073741818, 0, 1245811, -1073741818, 0, 1245812, -1073741818, 0, 1245813, -1073741818, 0, 1245814, -1073741818, 0, 1245815, -1073741818, 0, 1245816, -1073741818, 0, 1245817, -1073741818, 0, 1245818, -1073741818, 0, 1245819, -1073741818, 0, 1245820, -1073741818, 0, 1245821, -1073741818, 0, 1245822, -1073741818, 0, 1245830, 0, 0, 1245833, 0, 0, 1245836, 0, 0, 1245839, 0, 0, 1311288, 6, 0, 1311289, 6, 0, 1311290, 6, 0, 1311291, 6, 0, 1311292, 6, 0, 1311293, 6, 0, 1311294, 6, 0, 1311295, 6, 0, 1311296, 6, 0, 1311297, 6, 0, 1311298, 6, 0, 1311299, 6, 0, 1311300, 6, 0, 1311301, 6, 0, 1311302, 6, 0, 1311303, 6, 0, 1311328, -1073741818, 0, 1311329, -1073741818, 0, 1311330, -1073741818, 0, 1311331, -1073741818, 0, 1311332, -1073741818, 0, 1311333, -1073741818, 0, 1311334, -1073741818, 0, 1311335, -1073741818, 0, 1311336, -1073741818, 0, 1311337, -1073741818, 0, 1311338, -1073741818, 0, 1311339, -1073741818, 0, 1311340, -1073741818, 0 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+position = Vector2( 311.185, -27.1018 )
+scale = Vector2( 2.42891, 1.91701 )
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 16, 32 )
+format = 1

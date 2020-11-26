@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameAssets/Players/Fireball/0.png" type="Texture" id=1]
+[ext_resource path="res://FireBall.gd" type="Script" id=2]
+[ext_resource path="res://GameAssets/Players/Fireball/1.png" type="Texture" id=3]
+[ext_resource path="res://GameAssets/Players/Fireball/2.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.86963, 8.68365 )
+
+[node name="Fireball" type="Area2D" groups=[
+"Arrow",
+]]
+position = Vector2( 14.5318, 26.1782 )
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 10.1219, -6.20191 )
+scale = Vector2( 1.96587, 2.09704 )
+frames = SubResource( 1 )
+animation = "shoot"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 9.41535, -5.59893 )
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 11.3461, -5.6271 )
+scale = Vector2( 1.50144, 0.970115 )
+[connection signal="body_entered" from="." to="." method="_on_Arrow_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
